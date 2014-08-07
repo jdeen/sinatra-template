@@ -1,3 +1,4 @@
 require_relative '../application'
+#\ -s puma
 
-DLite.run!
+run DLite.new

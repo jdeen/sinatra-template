@@ -1,1 +1,1 @@
-web: bundle exec puma -p 4242 -C src/config/puma.rb
+web: bundle exec rackup src/config/puma.rb -p $PORT

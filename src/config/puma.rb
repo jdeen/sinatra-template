@@ -4,7 +4,7 @@ ENVIRONMENT = ENV['mode'] || 'development'
 # The directory to operate out of.
 # The default is the current directory.
 
-directory ROOT
+# directory ROOT
 
 # Load “path” as a rackup file.
 # The default is “config.ru”.

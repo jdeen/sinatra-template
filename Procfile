@@ -1,1 +1,1 @@
-web: bundle exec rackup src/config/puma.rb -p $PORT
+web: bundle exec rackup src/config/config.ru -p $PORT

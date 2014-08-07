@@ -1,7 +1,7 @@
 class DLite < Sinatra::Base
 
   get '/' do 
-    'Home!!!'
+    erb :test
   end
 
 end

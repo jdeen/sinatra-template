@@ -1,7 +1,7 @@
 class DLite < Sinatra::Base
 
   get '/' do 
-    erb :test, layout: :'layouts/layout'
+    erb :index, layout: :'layouts/layout'
   end
 
 end

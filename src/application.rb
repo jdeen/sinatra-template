@@ -3,10 +3,9 @@ require 'bundler/setup'
 require 'sinatra/base'
 require 'sinatra'
 require 'slim'
+require 'pry'
 
-require_relative 'helpers/init'
-require_relative 'routes/init'
-require_relative 'models/init'
+require_relative 'config/database'
 
 class DLite < Sinatra::Base
   
@@ -26,6 +25,12 @@ class DLite < Sinatra::Base
   # Configuration
   configure do
     set :server, :puma
+    
+    @db = ::DCustom::DatabaseSetup.new()
   end
 
 end
+
+require_relative 'helpers/init'
+require_relative 'routes/init'
+require_relative 'models/init'

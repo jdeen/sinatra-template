@@ -10,11 +10,22 @@ namespace :assets do
   namespace :compile do 
     desc "Compiles css to the public folder"
     task :css do
+      `sass src/assets/sass/pages:src/public/css/pages`
     end
 
     desc "Compiles js to the public folder"
     task :js do
     end
+
+    namespace :watch do
+      
+      desc "Watch CSS"
+      task :css do
+        `sass --watch src/assets/sass/pages:src/public/css/pages`
+      end
+
+    end
+
   end
 
 end

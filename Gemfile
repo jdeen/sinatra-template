@@ -17,6 +17,11 @@ gem 'tux'
 
 gem 'bcrypt-ruby'
 gem 'rake'
+
+# Layout and rendering
 gem 'slim'
+gem 'sass'
+
+# Debuggin
 gem 'pry'
 

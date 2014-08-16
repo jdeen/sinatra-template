@@ -15,7 +15,8 @@ namespace :assets do
 
     desc "Compiles js to the public folder"
     task :js do
-      `coffee --compile --ouput src/assets/coffee/pages src/public/js/pages`
+      puts "Compiling coffee"
+      `coffee --compile --output src/assets/coffee src/public/js`
     end
 
     namespace :watch do

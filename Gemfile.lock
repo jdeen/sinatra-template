@@ -122,6 +122,8 @@ GEM
       ripl-rack (>= 0.2.0)
       sinatra (>= 1.2.1)
     uuidtools (2.1.5)
+    warden (1.2.1)
+      rack (>= 1.0)
 
 PLATFORMS
   ruby
@@ -141,3 +143,4 @@ DEPENDENCIES
   sinatra-contrib
   slim
   tux
+  warden (= 1.2.1)

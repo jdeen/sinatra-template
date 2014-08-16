@@ -7,6 +7,7 @@ gem 'sinatra-contrib'
 gem 'foreman'
 gem 'puma'
 
+
 # Database
 gem 'data_mapper'
 gem 'dm-mysql-adapter'
@@ -16,7 +17,10 @@ gem 'dm-visualizer'
 # Shell
 gem 'tux'
 
+# Security
 gem 'bcrypt-ruby'
+gem 'warden', '1.2.1'
+
 gem 'rake'
 
 # Layout and rendering

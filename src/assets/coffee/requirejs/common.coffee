@@ -1,18 +1,20 @@
-requirejs.config
-  baseUrl: '/js/components',
+requirejs.config({
+  baseUrl: '/components',
   
   paths:
     # Libraries
-    jquery: 'jquery/dist/jquery.min'
-    bootstrap: 'bootstrap/dist/js/bootstrap.min'
+    'jquery': 'jquery/dist/jquery.min'
+    'bootstrap': 'bootstrap/dist/js/bootstrap.min'
   
     # Pages
-    index_page: '/js/pages/index'
+    'index_page': '/js/pages/index'
 
   shim: 
-    bootstrap: [ 'jquery' ]
+    'bootstrap': 
+      deps: [ 'jquery' ]
 
     # Pages
-    index_page: [ 'bootstrap' ]
-
+    'index_page': 
+      deps: [ 'bootstrap' ]
+})
 

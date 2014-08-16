@@ -10,13 +10,13 @@ namespace :assets do
   namespace :compile do 
     desc "Compiles css to the public folder"
     task :css do
-      `sass src/assets/sass/pages:src/public/css/pages`
+      `sass --update src/assets/sass/pages:src/public/css/pages --style compressed`
     end
 
     desc "Compiles js to the public folder"
     task :js do
       puts "Compiling coffee"
-      `coffee --compile --output src/assets/coffee src/public/js`
+      `coffee -o src/public/js/ -c src/assets/coffee/`
     end
 
     namespace :watch do

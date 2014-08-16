@@ -28,7 +28,7 @@ namespace :assets do
 
       desc "Watch JS"
       task :js do
-        `coffee --watch --compile --output src/assets/coffee/pages src/public/js/pages`
+        `coffee -o src/public/js/ -wc src/assets/coffee/`
       end
 
     end

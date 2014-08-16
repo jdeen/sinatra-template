@@ -1,7 +1,7 @@
 class DLite < Sinatra::Base
 
   get '/rjs' do 
-    slim :'pages/rjs', layout: :'layouts/layout'
+    slim :'pages/rjs', layout: :'layouts/bootstrap_base'
   end
 
 end

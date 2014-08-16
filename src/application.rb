@@ -1,14 +1,20 @@
 require 'rubygems'
 require 'bundler/setup'
+
+# Sinatra extensions
 require 'sinatra/base'
-require 'sinatra'
+require 'sinatra/content_for'
+
 require 'slim'
 require 'pry'
+
 
 require_relative 'config/database'
 
 class DLite < Sinatra::Base
-  
+
+  helpers Sinatra::ContentFor
+
   # Basic app information
   set :author_name, 'Ziyan Junaideen'
   set :author_company, 'Guru of IT'

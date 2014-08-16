@@ -3,8 +3,8 @@ namespace :assets do
 
   desc "Compiles assets to the public folder"
   task :compile do
-    Rake::Task["assets:compile:js"]
     Rake::Task["assets:compile:css"]
+    Rake::Task["assets:compile:js"]
   end
 
   namespace :compile do 

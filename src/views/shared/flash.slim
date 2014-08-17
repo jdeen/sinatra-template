@@ -1,11 +1,11 @@
 - unless flash[:success].nil?
-  == partial 'components/_bs_alert', locals: {type: 'success', message: flash[:success]}
+  == slim :'components/_bs_alert', locals: {type: 'success', message: flash[:success]}
 
-- unless flash[:error].nil?
-  == partial 'components/_bs_alert', locals: {type: 'error', message: flash[:error]}
+- if (!flash[:error].nil?) || (!flash[:danger].nil?)
+  == slim :'components/_bs_alert', locals: {type: 'danger', message: flash[:error]}
 
 - unless flash[:warning].nil?
-  == partial 'components/_bs_alert', locals: {type: 'warning', message: flash[:warning]}
+  == slim :'components/_bs_alert', locals: {type: 'warning', message: flash[:warning]}
 
 - unless flash[:info].nil?
-  == partial 'components/_bs_alert', locals: {type: 'info', message: flash[:warning]}
+  == slim :'components/_bs_alert', locals: {type: 'info', message: flash[:warning]}

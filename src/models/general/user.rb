@@ -1,9 +1,11 @@
+require 'bcrypt'
+
 class User
   include DataMapper::Resource
-  include BCrypt
+  include ::BCrypt
 
   # Associations
-  has_1 :personal_detail
+  has 1, :personal_detail
 
   property :id,               Serial
   

@@ -2,6 +2,7 @@ require 'rubygems'
 require 'data_mapper'
 require 'dm-migrations'
 require 'dm-migrations/migration_runner'
+require 'bcrypt'
 
 # The models
 require_relative '../models/init'

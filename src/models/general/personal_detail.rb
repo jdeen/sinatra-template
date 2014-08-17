@@ -1,5 +1,5 @@
 
-class PersonalDetails
+class PersonalDetail
   include DataMapper::Resource
 
   # Associations
@@ -10,7 +10,7 @@ class PersonalDetails
   property  :created_at,    DateTime
   property  :updated_at,    DateTime
 
-  property  :first_name,    DateTime, length: 25
+  property  :first_name,    String,   length: 25
   property  :last_name,     String,   length: 25
   property  :dob,           Date
 end

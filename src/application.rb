@@ -12,6 +12,7 @@ require 'pry'
 
 
 require_relative 'config/database'
+require_relative 'config/warden'
 
 class DLite < Sinatra::Base
 

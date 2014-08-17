@@ -11,11 +11,11 @@ class DLite < Sinatra::Base
 
     user = User.create(
       display_name: user.display_name,
-      email: uesr.email,
+      email: user.email,
       password: user.password, 
     )
 
-    pd = PersonalDetails.create(
+    pd = PersonalDetail.create(
       first_name: pd.first_name,
       last_name: pd.last_name,
       user: user,

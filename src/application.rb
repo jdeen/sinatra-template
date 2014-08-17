@@ -4,6 +4,7 @@ require 'bundler/setup'
 # Sinatra extensions
 require 'sinatra/base'
 require 'sinatra/content_for'
+require 'sinatra/flash'
 require 'bcrypt'
 
 require 'slim'
@@ -29,7 +30,7 @@ class DLite < Sinatra::Base
 
   enable :static  
   enable :sessions
-  register Siantra::Flash
+  register Sinatra::Flash
 
 
   # Configuration

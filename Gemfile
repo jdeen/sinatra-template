@@ -4,6 +4,7 @@ ruby '2.1.2'
 # Sysstem and Server
 gem 'sinatra', '~> 1.3.x'
 gem 'sinatra-contrib'
+gem 'sinatra-flash'
 gem 'foreman'
 gem 'puma'
 

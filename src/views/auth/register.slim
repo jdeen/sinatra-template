@@ -8,32 +8,32 @@
         .row
           .col-xs-12.col-sm-6.col-md-6
             .form-group
-              input#first_name.form-control.input-lg name="first_name" placeholder=("First Name") tabindex="1" type="text" 
+              input#first_name.form-control.input-lg name="personal_details[first_name]" placeholder=("First Name") tabindex="1" type="text" 
           .col-xs-12.col-sm-6.col-md-6
             .form-group
-              input#last_name.form-control.input-lg name="last_name" placeholder=("Last Name") tabindex="2" type="text" 
+              input#last_name.form-control.input-lg name="personal_details[last_name]" placeholder=("Last Name") tabindex="2" type="text" 
         .form-group
-          input#display_name.form-control.input-lg name="display_name" placeholder=("Display Name") tabindex="3" type="text" 
+          input#display_name.form-control.input-lg name="user[display_name]" placeholder=("Display Name") tabindex="3" type="text" 
         .form-group
-          input#email.form-control.input-lg name="email" placeholder=("Email Address") tabindex="4" type="email" 
+          input#email.form-control.input-lg name="user[email]" placeholder=("Email Address") tabindex="4" type="email" 
         .row
           .col-xs-12.col-sm-6.col-md-6
             .form-group
-              input#password.form-control.input-lg name="password" placeholder="Password" tabindex="5" type="password" 
+              input#password.form-control.input-lg name="user[password]" placeholder="Password" tabindex="5" type="password" 
           .col-xs-12.col-sm-6.col-md-6
             .form-group
-              input#password_confirmation.form-control.input-lg name="password_confirmation" placeholder=("Confirm Password") tabindex="6" type="password" 
+              input#password_confirmation.form-control.input-lg name="user[password_confirmation]" placeholder=("Confirm Password") tabindex="6" type="password" 
         .row
           .col-xs-4.col-sm-3.col-md-3
             span.button-checkbox
               button.btn data-color="info" tabindex="7" type="button"  I Agree
-              input#t_and_c.hidden name="t_and_c" type="checkbox" value="1" 
+              input#t_and_c.hidden name="agree[t_and_c]" type="checkbox" value="1" 
           .col-xs-8.col-sm-9.col-md-9
-            | By clicking
-            strong.label.label-primary Register  
-            | you agree to the
+            | By clicking  
+            strong.label.label-primary Register
+            | &nbsp;you agree to the  
             a data-target="#t_and_c_m" data-toggle="modal" href="#"  Terms and Conditions
-            | set out by this site, including our Cookie Use.
+            |   set out by this site, including our Cookie Use.
         hr.colorgraph
           .row
             .col-xs-12.col-md-6

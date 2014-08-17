@@ -37,5 +37,6 @@ html lang="en"
               a href="#contact"  Contact
         /! /.nav-collapse
     .container
+      == slim 'shared/flash'
       == yield 
     == yield_content :js

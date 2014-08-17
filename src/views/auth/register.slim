@@ -1,6 +1,6 @@
 .row
   .col-xs-12.col-sm-8.col-md-6.col-sm-offset-2.col-md-offset-3
-    form role="form" method="post"
+    form[method="post" data-parsley-validate data-parsley-errors-messages-disabled role="form"]
       h2
         | Please Sign Up 
         small to a world of endless possibilities.
@@ -8,21 +8,21 @@
         .row
           .col-xs-12.col-sm-6.col-md-6
             .form-group
-              input#first_name.form-control.input-lg name="personal_details[first_name]" placeholder=("First Name") tabindex="1" type="text" 
+              input#first_name.form-control.input-lg name="personal_details[first_name]" placeholder=("First Name") tabindex="1" type="text" data-parsley-type="alphanum" required="true"
           .col-xs-12.col-sm-6.col-md-6
             .form-group
-              input#last_name.form-control.input-lg name="personal_details[last_name]" placeholder=("Last Name") tabindex="2" type="text" 
+              input#last_name.form-control.input-lg name="personal_details[last_name]" placeholder=("Last Name") tabindex="2" type="text" data-parsley-type="alphanum" required="true"
         .form-group
-          input#display_name.form-control.input-lg name="user[display_name]" placeholder=("Display Name") tabindex="3" type="text" 
+          input#display_name.form-control.input-lg name="user[display_name]" placeholder=("Display Name") tabindex="3" type="text" data-parsley-type="alphanum" required="true"
         .form-group
-          input#email.form-control.input-lg name="user[email]" placeholder=("Email Address") tabindex="4" type="email" 
+          input#email.form-control.input-lg name="user[email]" placeholder=("Email Address") tabindex="4" type="email" required="true"
         .row
           .col-xs-12.col-sm-6.col-md-6
             .form-group
-              input#password.form-control.input-lg name="user[password]" placeholder="Password" tabindex="5" type="password" 
+              input#password.form-control.input-lg name="user[password]" placeholder="Password" tabindex="5" type="password" require="true" data-parsley-minlength="6"
           .col-xs-12.col-sm-6.col-md-6
             .form-group
-              input#password_confirmation.form-control.input-lg name="user[password_confirmation]" placeholder=("Confirm Password") tabindex="6" type="password" 
+              input#password_confirmation.form-control.input-lg name="user[password_confirmation]" placeholder=("Confirm Password") tabindex="6" type="password" drequired="true" data-parsley-equalto="[name='user[email]']"
         .row
           .col-xs-4.col-sm-3.col-md-3
             span.button-checkbox

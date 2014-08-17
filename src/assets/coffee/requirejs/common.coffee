@@ -31,7 +31,7 @@ requirejs.config({
       deps: [ 'bootstrap' ]
 
     'register_page':
-      deps: [ 'bootstrap', 'parsleyjs' ]
+      deps: [ 'bootstrap', 'parsleyjs', 'parsley_bootstrap' ]
     
     'login_page':
       deps: [ 'bootstrap', 'parsleyjs', 'parsley_bootstrap' ]

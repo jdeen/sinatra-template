@@ -4,6 +4,7 @@
     "requirejs": "~> 2.1.x",
     "jquery": "~> 2.1.x",   
     "bootstrap-sass-official": "~> 3.2.x",
-    "font-awesome": "~> 4.1.x"
+    "font-awesome": "~> 4.1.x",
+    "parsleyjs": "~> 2.0.x"
   }
 }

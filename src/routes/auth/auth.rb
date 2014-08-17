@@ -1,7 +1,7 @@
 class DLite < Sinatra::Base
 
   get '/auth/login' do
-    slim :login
+    slim :'auth/login', layout: :'layouts/layout'
   end
 
   post '/auth/login' do

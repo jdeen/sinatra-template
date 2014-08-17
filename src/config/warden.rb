@@ -22,6 +22,16 @@ class DLite < Sinatra::Base
     # app to send the user to.
     config.failure_app = self
   end
+  
+  set :restricted_to do |role|
+    condition do
+      user = env['warden'].user
+      unless env['warden'].authenticated?(:password) && user && user.type == role
+        flash[:warning] = 'You need to login to continue'
+        redirect '/auth/login'
+      end
+    end
+  end
 
 end
 

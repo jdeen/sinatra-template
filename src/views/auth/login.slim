@@ -3,9 +3,9 @@
     h1.text-center.login-title Sign in to continue
     .account-wall
       img.profile-img alt="" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120" 
-      form.form-signin method="post"
-        input.form-control autofocus="" placeholder="Email" required="" type="text"  name="user[email]"
-        input.form-control placeholder="Password" required="" type="password" name="user[password]"
+      form.form-signin[method="post" data-parsley-validate data-parsley-errors-messages-disabled]
+        input.form-control[autofocus="" placeholder="Email" type="email"  name="user[email]" required]
+        input.form-control[placeholder="Password" required="" type="password" name="user[password]" data-parsley-minlength="6" data-parsley-maxlength="40"]
         button.btn.btn-lg.btn-primary.btn-block type="submit" 
           | Sign in
         label.checkbox.pull-left
@@ -21,4 +21,4 @@
   link rel="stylesheet" href="/css/pages/login.css"
 
 - content_for :js do
-  script src="/components/requirejs/require.js" data-main="/js/requirejs/index.r"
+  script src="/components/requirejs/require.js" data-main="/js/requirejs/login.r"

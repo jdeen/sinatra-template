@@ -35,4 +35,10 @@ namespace :assets do
 
   end
 
+  desc "Fetch assets using bower and do necessary processing"
+  task :fetch do
+    `bower install`
+    `cp -r src/public/components/font-awesome/fonts/ src/public`
+  end
+
 end

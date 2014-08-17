@@ -1,7 +1,7 @@
 class DLite < Sinatra::Base
 
   get '/auth/register' do
-    slim :'auth/register', layout: :'layouts/layout'
+    slim :'auth/register', layout: :'layouts/layout', locals: { title: 'Register for Free - Wonder of Asia' }
   end
 
   post '/auth/register' do

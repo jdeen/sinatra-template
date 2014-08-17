@@ -22,6 +22,7 @@ class DLite < Sinatra::Base
     # app to send the user to.
     config.failure_app = self
   end
+
 end
 
 Warden::Manager.before_failure do |env,opts|

@@ -1,9 +1,7 @@
 class DLite < Sinatra::Base
 
-  get '/test' do 
-    puts User.all.length
-    user = User.create(email: 'Abc', password: 'abc')
-    puts User.all.length
+  get '/test', restricted_to: :user do
+    binding.pry
   end
 
 end

@@ -31,8 +31,10 @@ class DLite < Sinatra::Base
 
   enable :static  
   enable :sessions
+
   register Sinatra::Flash
 
+  use Rack::Session::Cookie
 
   # Configuration
   configure do

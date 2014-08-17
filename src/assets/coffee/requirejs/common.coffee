@@ -8,6 +8,7 @@ requirejs.config({
   
     # Pages
     'index_page': '/js/pages/index'
+    'register_page': '/js/pages/register'
 
   shim: 
     'bootstrap': 
@@ -15,6 +16,9 @@ requirejs.config({
 
     # Pages
     'index_page': 
+      deps: [ 'bootstrap' ]
+
+    'register_page':
       deps: [ 'bootstrap' ]
 })
 

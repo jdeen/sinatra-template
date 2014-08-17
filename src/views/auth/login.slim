@@ -42,3 +42,9 @@
       p.omb_forgotPwd
         a href="#"  Forgot password?
 
+/ Including CSS and JS for the page!
+- content_for :css do
+  link rel="stylesheet" href="/css/pages/login.css"
+
+- content_for :js do
+  script src="/components/requirejs/require.js" data-main="/js/requirejs/index.r"

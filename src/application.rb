@@ -24,10 +24,13 @@ class DLite < Sinatra::Base
   set :owner_name, 'Ziyan Junaideen'
   set :owner_company, 'Guru of IT'
   set :owner_email, 'jdeen-solutions@outlook.com'
-
-  enable :static  
   
   set :root, File.dirname(__FILE__)
+
+  enable :static  
+  enable :sessions
+  register Siantra::Flash
+
 
   # Configuration
   configure do

@@ -1,7 +1,7 @@
 class DLite < Sinatra::Base
 
   get '/' do 
-    erb :index, layout: :'layouts/layout'
+    slim :'pages/index', layout: :'layouts/layout_single_page', locals: { title: 'Wonder of Asia' }
   end
 
 end

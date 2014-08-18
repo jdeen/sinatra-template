@@ -5,14 +5,18 @@ class DLite < Sinatra::Base
   end
 
   post '/auth/login' do
-    env['warden'].authenticate!
-
-    flash[:success] = env['warden'].message
-
-    if session[:return_to].nil?
+    if env['warden'].authenticate!
+      flash[:success] = env['warden'].message
+      user = env['warden'].user
       redirect '/'
+      # if session[:return_to].nil?
+      #   redirect '/'
+      # else
+      #   redirect session[:return_to]
+      # end
     else
-      redirect session[:return_to]
+      flash[:error] = 'Error logging in. Are you sure that your Email and Password are correct?'
+      redirect '/auth/login'
     end
   end
 

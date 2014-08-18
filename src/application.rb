@@ -30,11 +30,12 @@ class DLite < Sinatra::Base
   set :root, File.dirname(__FILE__)
 
   enable :static  
+  
+  # Sessions
   enable :sessions
+  set :session_secret, 'all men must die'
 
   register Sinatra::Flash
-
-  use Rack::Session::Cookie
 
   # Configuration
   configure do

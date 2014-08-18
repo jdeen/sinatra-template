@@ -22,7 +22,7 @@ class DLite < Sinatra::Base
     )
 
     if user.saved?
-      flash[:success] = 'Success! Account Created'
+      flash[:success] = 'Success! Account Created. Please login to continue'
       redirect '/auth/login'
     end
 

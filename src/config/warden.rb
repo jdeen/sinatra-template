@@ -26,7 +26,7 @@ class DLite < Sinatra::Base
   set :restricted_to do |role|
     condition do
       user = env['warden'].user
-      unless env['warden'].authenticated?(:password) && user && user.type == role
+      unless env['warden'].authenticated? && user && user.type == role
         flash[:warning] = 'You need to login to continue'
         redirect '/auth/login'
       end
@@ -42,12 +42,11 @@ end
 
 Warden::Strategies.add(:password) do
   def valid?
-    params['user']['username'] && params['user']['password']
+    params['user']['email'] && params['user']['password']
   end
 
   def authenticate!
-    user = User.first(username: params['user']['username'])
-
+    user = User.first(email: params['user']['email'])
     if user.nil?
       fail!("The username you entered does not exist.")
     elsif user.authentic? params['user']['password']

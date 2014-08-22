@@ -8,7 +8,7 @@ require 'sinatra/flash'
 require 'bcrypt'
 
 # Localization
-
+require 'gettext'
 
 # Layouts
 require 'slim'
@@ -48,6 +48,9 @@ class DLite < Sinatra::Base
     set :server, :puma
     
     @db = ::DCustom::DatabaseSetup.new()
+
+    # Setting up localization
+    GetText.locale = "en_US" 
   end
 
 end

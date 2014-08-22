@@ -67,6 +67,7 @@ GEM
     dotenv (0.11.1)
       dotenv-deployment (~> 0.0.2)
     dotenv-deployment (0.0.2)
+    fast_gettext (0.9.0)
     fastercsv (1.5.5)
     foreman (0.74.0)
       dotenv (~> 0.11.1)
@@ -136,6 +137,7 @@ DEPENDENCIES
   dm-mysql-adapter
   dm-sqlite-adapter
   dm-visualizer
+  fast_gettext
   foreman
   pry
   puma

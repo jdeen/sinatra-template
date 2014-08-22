@@ -7,7 +7,13 @@ require 'sinatra/content_for'
 require 'sinatra/flash'
 require 'bcrypt'
 
+# Localization
+require 'sinatra/r18n'
+
+# Layouts
 require 'slim'
+
+# Debuggin
 require 'pry'
 
 

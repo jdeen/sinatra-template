@@ -8,6 +8,9 @@ gem 'sinatra-flash'
 gem 'foreman'
 gem 'puma'
 
+# Languages and localization
+gem 'fast_gettext'
+
 
 # Database
 gem 'data_mapper'

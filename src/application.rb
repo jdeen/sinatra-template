@@ -8,7 +8,7 @@ require 'sinatra/flash'
 require 'bcrypt'
 
 # Localization
-require 'sinatra/r18n'
+
 
 # Layouts
 require 'slim'

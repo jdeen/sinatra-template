@@ -10,7 +10,7 @@ gem 'puma'
 
 # Languages and localization
 gem 'fast_gettext'
-
+gem 'gettext'
 
 # Database
 gem 'data_mapper'

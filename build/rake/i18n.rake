@@ -1,6 +1,6 @@
 
 
-namespace I18n do
+namespace :I18n do
   
   desc "Combine" 
   task :combine do

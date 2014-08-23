@@ -2,46 +2,37 @@
 header[style="background-image: url(/img/about-to-set-sail.jpg)"]
   .container
     .intro-text
-      .intro-lead-in ... the ultimate Sri Lankan business potral ...
+      .intro-lead-in ... #{t.index.moto} ...
       .intro-heading Wonder of Asia
-      a.page-scroll.btn.btn-xl href="#about"  Tell Me More
+      a.page-scroll.btn.btn-xl href="#about" = t.text.tell_me_more
 /! Services Section
 section#about
   .container
     .row
       .col-lg-12.text-center
-        h2.section-heading We are Sri Lanka
-        h3.section-subheading.text-muted
-          | Starting a business is not enaugh. You need to make sure your business is found by your potential clients easily. The most effective way of getting attention is through the internet. You believe or not, most high valued clients search online for what hey want and if they find a good product and if its convincing they will go for it. We make it easy for businesses to reach out to clients and also to one another to make even better products. 
+        h2.section-heading = t.index.about_title
+        h3.section-subheading.text-muted = t.index.about_body 
           strong What matter is Sri Lanka, making it win is your duty!
     .row.text-center
       .col-md-4
         span.fa-stack.fa-4x
           i.fa.fa-circle.fa-stack-2x.text-primary
           i.fa.fa-compress.fa-stack-1x.fa-inverse
-        h4.service-heading Spread the word
-        p.text-muted
-          | The most impotant aspect of a business is to let know others of your business. While conventional media provide vast coverage, they have shown little effectivity. This is because people watch media not to look at your advertisment. But the internet is different. People reach the internet to learn some thing new and its the ideal way to let teach them about your services. The first step would be to list your business online. 
-          br
-          strong And its free!
+        h4.service-heading = t.index.spred_word_title
+        p.text-muted = t.index.spred_word_body
       .col-md-4
         span.fa-stack.fa-4x
           i.fa.fa-circle.fa-stack-2x.text-primary
           i.fa.fa-gear.fa-stack-1x.fa-inverse
-        h4.service-heading Find new suppliers
-        p.text-muted
-          | Reaching out to clients is important, but even more important is sustaining supply chains. Meaning, what are you going to give to your clients if you are out of supplies? Wonder of Asia makes it easy for you can reach out to new suppliers. As a business gets established, it is important to have multiple suppliers. We make it easy for you to find new suppliers to keep you business running regardless of any market/political/environmental condition. 
-          br
-          strong This too is free!
+        h4.service-heading = t.index.supplies_title
+        p.text-muted = t.index.supplies_body 
       .col-md-4
         span.fa-stack.fa-4x
           i.fa.fa-circle.fa-stack-2x.text-primary
           i.fa.fa-lock.fa-stack-1x.fa-inverse
-        h4.service-heading Free tools for Businesses
-        p.text-muted
-          | Once you have some thing substantial, your business deserves to have its website. In the europian markets, a business without a website is hard to immagine and the same its importance is increasingly felt in Sri Lanka and other Asian markets. We partner with 
-          a href="http://www.guruof.it" Guru of IT
-          |  to gift our early subscribers with free websites. Other useful software applications such as inventory managers and tablet friendly POS applications are also planed to be included.
+        h4.service-heading = t.index.tools_title
+        p.text-muted = t.index.tools_body
+          
 /! Portfolio Grid Section
 /section#portfolio.bg-light-gray
 /  .container
@@ -123,25 +114,40 @@ section#contact
   .container
     .row
       .col-lg-12.text-center
-        h2.section-heading Contact Us
-        h3.section-subheading.text-muted Lorem ipsum dolor sit amet consectetur.
+        h2.section-heading = t.text.contact_us
+        h3.section-subheading.text-muted = t.index.contact_sub_title
     .row
       .col-lg-12
         form#contactForm name="sentMessage" novalidate="" 
           .row
             .col-md-6
               .form-group
-                input#name.form-control data-validation-required-message=("Please enter your name.") placeholder=("Your Name *") required="" type="text" 
+                input#name.form-control[
+                  data-validation-required-message=("Please enter your name.") 
+                  placeholder=("#{t.form.name} *") 
+                  required="" 
+                  type="text"]
                   p.help-block.text-danger
               .form-group
-                input#email.form-control data-validation-required-message=("Please enter your email address.") placeholder=("Your Email *") required="" type="email" 
+                input#email.form-control[
+                  data-validation-required-message=("Please enter your email address.") 
+                  placeholder=("#{t.form.email} *") 
+                  required="" 
+                  type="email"]
                   p.help-block.text-danger
               .form-group
-                input#phone.form-control data-validation-required-message=("Please enter your phone number.") placeholder=("Your Phone *") required="" type="tel" 
+                input#phone.form-control[
+                  data-validation-required-message=("Please enter your phone number.") 
+                  placeholder=("#{t.form.phone} *") 
+                  required="" 
+                  type="tel"]
                   p.help-block.text-danger
             .col-md-6
               .form-group
-                textarea#message.form-control data-validation-required-message=("Please enter a message.") placeholder=("Your Message *") required="" 
+                textarea#message.form-control[
+                  data-validation-required-message=("Please enter a message.") 
+                  placeholder=("#{t.form.message} *") 
+                  required=""]
                 p.help-block.text-danger
             .clearfix
             .col-lg-12.text-center

@@ -1,3 +1,13 @@
+site:
+  name: Wonder of Asia
+  footer: Mohamed Ziyan Junaideen
+
+text:
+  tell_me_more: Tell me more
+
+index:
+  moto: The ultimate Sri Lankan business directory
+  about_title: Transcend your business to ultimate success
 register:
   email: 'Email'
   password: 'Password'

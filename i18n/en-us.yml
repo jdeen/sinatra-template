@@ -1,0 +1,8 @@
+register:
+  email: 'Email'
+  password: 'Password'
+
+login:
+  email: 'Email'
+  password: 'Password'
+

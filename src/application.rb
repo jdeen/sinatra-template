@@ -9,16 +9,22 @@ require 'bcrypt'
 
 # Localization
 require 'gettext'
+require 'i18n'
+require 'i18n/backend/fallbacks'
+require 'sinatra/r18n'
 
 # Layouts
 require 'slim'
 
 # Debuggin
 require 'pry'
-
+Pry.config.input = STDIN
+Pry.config.output = STDOUT
 
 require_relative 'config/database'
 require_relative 'config/warden'
+
+ROOT = File.expand_path('../', File.dirname(__FILE__))
 
 class DLite < Sinatra::Base
 
@@ -42,6 +48,7 @@ class DLite < Sinatra::Base
   set :session_secret, 'all men must die'
 
   register Sinatra::Flash
+  register Sinatra::R18n
 
   # Configuration
   configure do
@@ -49,8 +56,17 @@ class DLite < Sinatra::Base
     
     @db = ::DCustom::DatabaseSetup.new()
 
-    # Setting up localization
-    GetText.locale = "en_US" 
+    # I18n::Backend::Simple.send(:include, I18n::Backend::Fallbacks)
+    # I18n.load_path = Dir[File.join(ROOT, 'locales', '*.yaml')]
+    # I18n.backend.load_translations
+    
+    # Location of langyage yaml files
+    R18n.default_places { "#{ROOT}/i18n" }
+  end
+
+  # Before
+  before '/:locale/*' do 
+    @locale = params[:locale]
   end
 
 end

@@ -1,6 +1,9 @@
 require 'rubygems'
 require 'rake'
 
+$project = "WoA"
+$version = (`git describe --tags`).chomp.to_s
+
 # Load rake tasks
 Dir.glob('build/rake/**/*.rake').each { |f| import f }
 

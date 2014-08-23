@@ -1,0 +1,13 @@
+register:
+  email: 'Email'
+  password: 'Password'
+
+login:
+  email: 'විද්‍යුත් තැපෑල'
+  password: 'රහස් කේතය'
+  submit: 'පිවිසෙන්න'
+  help_link: 'උපකාර අවශ්‍යද?'
+  remember_me: 'මා අමතක නොකරන්න'
+  title: 'ඇතුලු වීමට ඔබගේ විස්තර සපයන්න'
+  create_account: 'අළුත් සාමාජිකත්වයක් ලබාගන්න'
+

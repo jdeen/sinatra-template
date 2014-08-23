@@ -4,6 +4,11 @@ class DLite < Sinatra::Base
     slim :'auth/login', layout: :'layouts/layout', locals: { title: 'Existing Members - Login to Wonder of Asia' }
   end
 
+  get '/:locale/auth/login' do
+    binding.pry 
+    slim :'auth/login', layout: :'layouts/layout', locals: { title: 'Existing Members - Login to Wonder of Asia' }
+  end
+
   post '/auth/login' do
     if env['warden'].authenticate!
       flash[:success] = env['warden'].message

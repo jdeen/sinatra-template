@@ -9,6 +9,9 @@ gem 'foreman'
 gem 'puma'
 
 # Languages and localization
+gem 'i18n'
+gem 'r18n-core'
+gem 'sinatra-r18n'
 gem 'fast_gettext'
 gem 'gettext'
 

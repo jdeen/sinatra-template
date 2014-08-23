@@ -75,6 +75,7 @@ GEM
     gettext (3.1.3)
       locale (>= 2.0.5)
       text
+    i18n (0.6.11)
     json (1.8.1)
     json_pure (1.8.1)
     locale (2.1.0)
@@ -86,6 +87,7 @@ GEM
       slop (~> 3.4)
     puma (2.9.0)
       rack (>= 1.1, < 2.0)
+    r18n-core (1.1.11)
     rack (1.5.2)
     rack-protection (1.5.3)
       rack
@@ -115,6 +117,9 @@ GEM
       tilt (~> 1.3)
     sinatra-flash (0.3.0)
       sinatra (>= 1.0.0)
+    sinatra-r18n (1.1.11)
+      r18n-core (= 1.1.11)
+      sinatra (>= 1.3)
     slim (2.0.3)
       temple (~> 0.6.6)
       tilt (>= 1.3.3, < 2.1)
@@ -145,13 +150,16 @@ DEPENDENCIES
   fast_gettext
   foreman
   gettext
+  i18n
   pry
   puma
+  r18n-core
   rake
   sass
   sinatra (~> 1.3.x)
   sinatra-contrib
   sinatra-flash
+  sinatra-r18n
   slim
   tux
   warden (= 1.2.1)

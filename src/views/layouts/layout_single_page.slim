@@ -42,6 +42,17 @@ html lang="en"
           ul.nav.navbar-nav.navbar-right
             li.hidden
               a href="#page-top" 
+
+            li.dropdown
+              a.dropdown-toggle data-toggle="dropdown" href="#" 
+                | Language
+                span.caret
+              ul.dropdown-menu role="menu" 
+                li
+                  a href="/en-us/" English
+                li
+                  a href="/si-lk/" Sinhalese
+
             li
               a.page-scroll href="#about"  About
             li
@@ -69,11 +80,11 @@ html lang="en"
                 a href="#" 
                   i.fa.fa-linkedin
           .col-md-4
-            ul.list-inline.quicklinks
-              li
-                a href="#"  Privacy Policy
-              li
-                a href="#"  Terms of Use
+            /ul.list-inline.quicklinks
+            /  li
+            /    a href="#"  Privacy Policy
+            /  li
+            /    a href="#"  Terms of Use
     /! jQuery Version 1.11.0
     script src="/js/jquery-1.11.0.js" 
     /! Bootstrap Core JavaScript

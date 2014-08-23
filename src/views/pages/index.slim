@@ -147,5 +147,7 @@ section#contact
             .col-lg-12.text-center
               #success
               button.btn.btn-xl type="submit"  Send Message
-== slim :'pages/_portfolio'
+/== slim :'pages/_portfolio'
 
+- content_for :css do
+  link rel="stylesheet" href="/css/pages/index.css"

@@ -27,15 +27,15 @@ html lang="en"
             span.icon-bar
             span.icon-bar
             span.icon-bar
-          a.navbar-brand href="#" Wonder of Asia
+          a.navbar-brand href="#{link '/'}" = t.site.name
         .collapse.navbar-collapse
           ul.nav.navbar-nav
             li.active
-              a href="#"  Home
+              a href="#{link '/'}" = t.menu.home 
             li
-              a href="#about"  About
+              a href="#{link '/about'}" = t.menu.about
             li
-              a href="#contact"  Contact
+              a href="#{link '/contact'}" = t.menu.contact
           - if logged_in?
             == slim :'shared/_user_menu'
         /! /.nav-collapse

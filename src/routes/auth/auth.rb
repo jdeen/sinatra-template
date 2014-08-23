@@ -1,11 +1,6 @@
 class DLite < Sinatra::Base
 
-  get '/auth/login' do
-    slim :'auth/login', layout: :'layouts/layout', locals: { title: 'Existing Members - Login to Wonder of Asia' }
-  end
-
   get '/:locale/auth/login' do
-    binding.pry 
     slim :'auth/login', layout: :'layouts/layout', locals: { title: 'Existing Members - Login to Wonder of Asia' }
   end
 

@@ -1,3 +1,11 @@
+site:
+  name: 'ආසියාවේ ආශ්චර්ය්‍ය'
+  footer: 'මොහොමඩ් සියාන් ජුනෙය්ඩීන්'
+menu:
+  home: 'මූලික පිටුව'
+  about: 'අප ගැන'
+  contact: 'සම්බන්ද වන්න'
+
 register:
   email: 'Email'
   password: 'Password'

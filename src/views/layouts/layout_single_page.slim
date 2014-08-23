@@ -6,17 +6,20 @@ html lang="en"
     meta content="width=device-width, initial-scale=1" name="viewport" 
     meta content="" name="description" 
     meta content="" name="author" 
-    title Agency DLite by GuruOF.IT
-    /! Bootstrap Core CSS
+    title Wonder of Asia
+    
+    /! CSS
     link href="/css/bootstrap.min.css" rel="stylesheet" 
-    /! Custom CSS
     link href="/css/agency.css" rel="stylesheet" 
+    == yield_content :css
+    
     /! Custom Fonts
     link href="/components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" 
     link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" 
     link href="http://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet" type="text/css" 
     link href="http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" 
     link href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" 
+    
     /! HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
     /! WARNING: Respond.js doesn't work if you view the page via file://
     /![if lt IE 9]
@@ -40,13 +43,7 @@ html lang="en"
             li.hidden
               a href="#page-top" 
             li
-              a.page-scroll href="#services"  Services
-            li
-              a.page-scroll href="#portfolio"  Portfolio
-            li
               a.page-scroll href="#about"  About
-            li
-              a.page-scroll href="#team"  Team
             li
               a.page-scroll href="#contact"  Contact
         /! /.navbar-collapse

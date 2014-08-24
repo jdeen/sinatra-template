@@ -4,10 +4,24 @@ site:
 
 text:
   tell_me_more: Tell me more
+  contact_us: Contact Us
 
 index:
   moto: The ultimate Sri Lankan business directory
   about_title: Transcend your business to ultimate success
+  about_body: A business is like a child. It grows as a child to its adolacense in time. In the begining you have a a lot of caretaking to do but as the business grows it becomes self sustainable. But as benifactors and parents of the business there are a lot that you can do for its improvements. As responsible citizens and professionals in the IT industry, its our responsibility to assist you who sustain the nations economy. We will help you to find new markets and expand your business and provide other necessary technological assistance for success.
+
+  spred_word_title: Gain Attention
+  spred_word_body: A business can attract attention in many ways. Websites today are the best way to convey the message to the client and it gets abundantly clear when even veteran media organizations keep on talking about their websites. Jump start your business with the online coverage our business directory offers.
+
+  supplies_title: Expand Opportunities
+  supplies_body: As you gain more attention, your business grows, its not rocket science behind it. At this point it becomes a risk to rely on one supplier and narrow services/product base. Find new suppliers with lower pricees and flexibility using our state of the art business search endine. 
+
+  tools_title: Business Tools
+  tools_body: As much as a child requires education to develop, a business requires technology. Websites, corporate networking, training staff, custom built software, technological advices are invalluable assets for businesses. We partner with industry leaders to provide these services at economy rates to you.
+
+  contact_sub_title: Should you have any thing to inquire, fill in the form and we will keep in touch. 
+
 register:
   email: 'Email'
   password: 'Password'
@@ -16,3 +30,9 @@ login:
   email: 'Email'
   password: 'Password'
 
+form:
+  name: 'Your name'
+  email: 'Your email'
+  phone: 'Contact number'
+  message: 'Message'
+  send_message: Send Message

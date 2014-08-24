@@ -41,3 +41,11 @@ gem 'pry'
 
 # Monitoring
 gem 'newrelic_rpm'
+
+
+group :test do
+  gem 'cucumber'
+  gem 'watir-webdriver'
+  gem 'rspec'
+  gem 'rspec-expectations'
+end

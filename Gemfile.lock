@@ -81,6 +81,7 @@ GEM
     locale (2.1.0)
     method_source (0.8.2)
     multi_json (1.10.1)
+    newrelic_rpm (3.9.2.239)
     pry (0.10.0)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -151,6 +152,7 @@ DEPENDENCIES
   foreman
   gettext
   i18n
+  newrelic_rpm
   pry
   puma
   r18n-core

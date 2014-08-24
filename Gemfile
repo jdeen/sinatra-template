@@ -21,6 +21,8 @@ gem 'dm-mysql-adapter'
 gem 'dm-sqlite-adapter', group: :development
 gem 'dm-visualizer'
 
+# Mail
+
 # Shell
 gem 'tux'
 
@@ -37,3 +39,5 @@ gem 'sass'
 # Debuggin
 gem 'pry'
 
+# Monitoring
+gem 'newrelic_rpm'

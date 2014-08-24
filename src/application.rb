@@ -39,7 +39,10 @@ class DLite < Sinatra::Base
   set :owner_company, 'Guru of IT'
   set :owner_email, 'jdeen-solutions@outlook.com'
   
-  set :root, File.dirname(__FILE__)
+  set :root, File.expand_path('../', File.dirname(__FILE__))
+  set :app_file, __FILE__
+  set :public_folder, File.expand_path('public', File.dirname(__FILE__))
+  set :views, File.expand_path('views', File.dirname(__FILE__))
 
   enable :static  
   

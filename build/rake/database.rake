@@ -136,6 +136,23 @@ namespace :db do
     puts "<= #{t.name} done"
   end
 
+  # namespace :seed do
+  #   
+  #   desc "Load the seed data from file"
+  #   task file: :environment do |t, _|
+  #     file = ENV['seeder']
+  #     path = File.expand_path("../../src/models/seeders/#{file}.rb", File.dirname(__FILE__))
+  #     
+  #     if File.exist?(path)
+  #       puts "~> seeder does not exist"
+  #       return
+  #     else
+  #       load(path)
+  #       puts "~> seeding done!"
+  #     end
+  #   end
+  # end
+
   desc "Drop the database, migrate from scratch and initialize with the seed data"
   task :reset => [:drop, :setup]
 

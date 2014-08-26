@@ -10,7 +10,7 @@ require 'rake'
 # replace this with however your app configures DataMapper repositor(ies)
 task :environment do
   require File.expand_path('../../src/config/database', File.dirname(__FILE__))
-  db = DCustom::DatabaseSetup.new
+  @db = DCustom::DatabaseSetup.new
 end
 
 namespace :db do

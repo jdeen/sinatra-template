@@ -4,9 +4,6 @@ class User
   include DataMapper::Resource
   include ::BCrypt
 
-  # Associations
-  has 1, :personal_detail
-
   property :id,               Serial
   
   property :created_at,       DateTime

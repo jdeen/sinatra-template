@@ -3,7 +3,7 @@ class PersonalDetail
   include DataMapper::Resource
 
   # Associations
-  belongs_to :user
+  belongs_to :person
 
   property  :id,            Serial
 

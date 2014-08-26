@@ -1,4 +1,6 @@
 Given(/^I am on home page$/) do
-  @browser.goto('www.wonderof.asia')
-  expect(@browser.title).to eq('Wonder of Asia')
+  binding.pry
+  # site = Features::Pages::Site.new(@browser)
+  # home_page = site.home_page
+  # home_page.submit_contact( 'Ziyan', 'mzjdeen@hotmail.com', '123', 'ABC' )
 end

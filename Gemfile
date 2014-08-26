@@ -20,8 +20,12 @@ gem 'data_mapper'
 gem 'dm-mysql-adapter'
 gem 'dm-sqlite-adapter', group: :development
 gem 'dm-visualizer'
+gem 'dm-geokit'
+gem 'geokit'
 
 # Mail
+gem 'mail'
+gem 'send_with_us'
 
 # Shell
 gem 'tux'

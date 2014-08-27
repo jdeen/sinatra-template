@@ -14,6 +14,8 @@ class User
   property :password,         BCryptHash
   property :display_name,     String,                   length: 25
 
+  belongs_to :person
+
   def authentic? password
     self.password == password
   end

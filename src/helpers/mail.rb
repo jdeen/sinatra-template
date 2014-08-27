@@ -1,5 +1,5 @@
 require_relative '../lib/email'
-require_relative '../lib/send_with_us'
+require_relative '../lib/ab_testing'
 
 class DLite < Sinatra::Base
 

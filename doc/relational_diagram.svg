@@ -30,7 +30,7 @@
 <text text-anchor="middle" x="71" y="-447.3" font-family="Times,serif" font-size="14.00">email: String</text>
 <text text-anchor="middle" x="71" y="-432.3" font-family="Times,serif" font-size="14.00">password: BCryptHash</text>
 <text text-anchor="middle" x="71" y="-417.3" font-family="Times,serif" font-size="14.00">display_name: String</text>
-<text text-anchor="middle" x="71" y="-402.3" font-family="Times,serif" font-size="14.00">person_id: Integer</text>
+<text text-anchor="middle" x="71" y="-402.3" font-family="Times,serif" font-size="14.00">person: Person</text>
 </g>
 <!-- Person&#45;&gt;User -->
 <g id="edge1" class="edge"><title>Person&#45;&gt;User</title>

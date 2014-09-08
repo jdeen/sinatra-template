@@ -1,4 +1,4 @@
-class DCustom
+module DCustom
   class EMail
 
     def initialize options = nil, logger = nil

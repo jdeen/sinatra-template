@@ -55,7 +55,7 @@ class DLite < Sinatra::Base
 
   # Configuration
   configure do
-    set :server, :puma
+    # set :server, :puma
     
     @db = ::DCustom::DatabaseSetup.new()
 

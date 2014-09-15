@@ -46,6 +46,14 @@ module Lib
         @files ||= @album.files.map { |files| Lib::Media::File.new(file) }
       end
 
+      def cover_thumbs qty = 4
+        if images.length > 3 
+          imgs = images[0..4]
+        else
+          imgs = images[0..images.length]
+        end
+      end
+
       private
       
       # @fn       def get_default_album {{{

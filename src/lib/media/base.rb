@@ -9,7 +9,13 @@ module Lib
         if album_id = nil
           get_default_album
         else
-          DB::Media::Album.get(album_id.to_i)
+          album = DB::Media::Album.get(album_id.to_i)
+          
+          if album.nil?
+            get_default_album
+          else
+            album
+          end
         end
 
       end # def get_album }}}
@@ -17,7 +23,9 @@ module Lib
       # @fn       def get_default_album {{{
       # @brief    Returns the default album. If not exists, creates it.
       def get_default_album
-        DB::Media::Album.first_or_create( title: 'Default' ).update( description: 'The default album' )
+        album = DB::Media::Album.first_or_create( title: 'Default' )
+        album.update( description: 'The default album' )
+        album
       end # def get_default_album }}}
 
     end

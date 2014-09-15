@@ -1,9 +1,10 @@
-require_relative 'base'
 require_relative 'album'
 
 module Lib
   module Media
 
+    # @class      class Image {{{
+    # @brief      Abstracts the use of database Image class with the website
     class Image
 
       def initialize
@@ -16,9 +17,8 @@ module Lib
         image = DB::Media::Image.create( albums: [ album ], description: description, file: file )
 
         [true, 'Image Uploaded successfully', image]
-      end # }}}
+      end # def create }}}
 
-    end
-
+    end # }}}
   end
 end

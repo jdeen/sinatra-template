@@ -28,5 +28,10 @@ module DB
       mount_uploader      :file,          FileUploader
     end
 
+    class Video   < Element
+      property            :type,          Enum[:youtube]
+      property            :link,          String,       length: 254
+    end
+
   end
 end

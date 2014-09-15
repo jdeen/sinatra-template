@@ -12,6 +12,7 @@ module DB
       has n, :images, through: Resource
       has n, :files,  through: Resource
       has n, :audios, through: Resource
+      has n, :videos, through: Resource
     end
   end
 end

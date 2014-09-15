@@ -30,6 +30,10 @@ module Lib
         self
       end # def load }}}
 
+      def images
+        @album.images
+      end
+
       private
       
       # @fn       def get_default_album {{{

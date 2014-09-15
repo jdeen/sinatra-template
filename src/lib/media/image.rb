@@ -21,6 +21,14 @@ module Lib
         [true, 'Image Uploaded successfully', image]
       end # def create }}}
 
+      def albums
+        @albums ||= @image.albums.map { |album| Lib::Media::Album.new(album) }
+      end
+
+      def description
+        @image.description
+      end
+
       private 
 
       # @fn       def update_instance image = nil {{{
@@ -28,6 +36,7 @@ module Lib
       def update_instance image = nil
         unless image.nil?
           @image = image
+          @album = nil
         end
       end # }}}
 

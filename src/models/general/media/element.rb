@@ -3,18 +3,26 @@ module Media
   
     include DataMapper::Resource
 
-    property      :id,            Serial
+    property            :id,            Serial
     
-    property      :created_at,    DateTime
-    property      :updated_at,    DateTime
+    property            :created_at,    DateTime
+    property            :updated_at,    DateTime
 
-    property      :description,   String,       length: 254
+    property            :description,   String,       length: 254
   end
 
   # Types of media available
 
-  class Image   < Element; end
-  class File    < Element; end
-  class Audio   < Element; end
+  class Image   < Element 
+    mount_uploader      :file,          ImageUploader
+  end
+
+  class File    < Element
+    mount_uploader      :file,          FileUploader
+  end
+
+  class Audio   < Element
+    mount_uploader      :file,          AudioUploader
+  end
 
 end

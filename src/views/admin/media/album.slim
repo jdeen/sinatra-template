@@ -10,24 +10,25 @@
 
 .panel.panel-default
   .panel-heading
-    = album.title
+    | Images
   .panel-body
     #links
       - album.images.each do |image|
         a data-gallery="" href="#{image.url}" title="Test" 
           img alt="Banana" src="#{image.square_thumb_small}" 
       
-    
-    //ul
-    //  - album.images.each do |image|
-    //    li
-    //      img src="#{image.square_thumb_small}"
-
-
+.panel.panel-default
+  .panel-heading
+    | Videos
+  .panel-body
+    #links
+      - album.images.each do |image|
+        a data-gallery="" href="#{image.url}" title="Test" 
+          img alt="Banana" src="#{image.square_thumb_small}" 
 
 
 /! The Bootstrap Image Gallery lightbox, should be a child element of the document body
-#blueimp-gallery.blueimp-gallery
+#blueimp-gallery.blueimp-gallery data-use-bootstrap-modal="false" 
   /! The container for the modal slides
   .slides
   /! Controls for the borderless lightbox

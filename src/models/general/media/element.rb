@@ -22,7 +22,7 @@ module Media
   end
 
   class Audio   < Element
-    mount_uploader      :file,          AudioUploader
+    mount_uploader      :file,          FileUploader
   end
 
 end

@@ -1,3 +1,5 @@
+require_relative '../../../lib/media/image'
+
 class DLite < Sinatra::Base
 
   post '/admin/media/images' do
@@ -5,7 +7,7 @@ class DLite < Sinatra::Base
     description   = params[:media][:description]
     file          = params[:media][:file]
 
-    status, message = media_images.create( album_id, description, file )
+    status, message, image = Lib::Media::Image.new.create( album_id, description, file )
 
     if status == true
       flash[:success] = "Image uploaded succesfully."

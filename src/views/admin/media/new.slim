@@ -1,26 +1,81 @@
-.col-lg-12
-  .row
-    .col-lg-6
+.row
+  .col-lg-6
 
-      .panel.panel-default
-        .panel-heading
-          Upload New Image
+    .panel.panel-default
+      .panel-heading
+        Upload New Image
 
-        .panel-body
+      .panel-body
 
-          form action="/admin/media/images" method="post"
+        form action="/admin/media/images" method="post"
 
-            .form-group
-              label Album
-              select.form-control name="media[album_id]"
-                option value="1" Default
-            
-            .form-group
-              label Description
-              textarea.form-control name="media[description]"
+          .form-group
+            label Album
+            select.form-control name="media[album_id]"
+              option value="1" Default
+          
+          .form-group
+            label Description
+            textarea.form-control name="media[description]"
 
-            .form-group
-              label Image to upload
-              input type="file" name="media[file]"
+          .form-group
+            label Image to upload
+            input type="file" name="media[file]"
 
-            button.btn.btn-default type="submit" Upload
+          button.btn.btn-default type="submit" Upload
+
+hr
+
+.row 
+  .col-lg-6
+
+    .panel.panel-default
+      .panel-heading
+        Upload New Audio
+
+      .panel-body
+
+        form action="/admin/media/audios" method="post"
+
+          .form-group
+            label Album
+            select.form-control name="media[album_id]"
+              option value="1" Default
+          
+          .form-group
+            label Description
+            textarea.form-control name="media[description]"
+
+          .form-group
+            label Audio to upload
+            input type="file" name="media[file]"
+
+          button.btn.btn-default type="submit" Upload
+
+hr
+
+.row  
+  .col-lg-6
+
+    .panel.panel-default
+      .panel-heading
+        Upload New File
+
+      .panel-body
+
+        form action="/admin/media/files" method="post"
+
+          .form-group
+            label Album
+            select.form-control name="media[album_id]"
+              option value="1" Default
+          
+          .form-group
+            label Description
+            textarea.form-control name="media[description]"
+
+          .form-group
+            label Image to upload
+            input type="file" name="media[file]"
+
+          button.btn.btn-default type="submit" Upload

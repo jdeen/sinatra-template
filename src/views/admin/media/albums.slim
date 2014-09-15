@@ -1,3 +1,7 @@
 ul
   - albums.each do |album|
-    li = album.title
+    li
+      h3 = album.title
+
+      - album.cover_thumbs.each do |thumb|
+        img src="#{thumb}"

@@ -48,10 +48,12 @@ module Lib
 
       def cover_thumbs qty = 4
         if images.length > 3 
-          imgs = images[0..4]
+          imgs = images[0, 4]
         else
-          imgs = images[0..images.length]
+          imgs = images[0, images.length]
         end
+
+        imgs.map { |i| i.square_thumb }
       end
 
       private

@@ -15,7 +15,11 @@ module Lib
       # @brief    Uploads an image and records it in the database.
       def create album_id = nil, description = nil, file = nil
         album = Album.new.load(album_id).album
-        image = DB::Media::Image.create( albums: [ album ], description: description, file: file )
+        image = DB::Media::Image.create( description: description, file: file )
+        image.albums << album
+        image.save
+
+        binding.pry
         update_instance(image)
 
         [true, 'Image Uploaded successfully', image]
@@ -27,6 +31,11 @@ module Lib
 
       def description
         @image.description
+      end
+
+      def square_thumb
+        binding.pry
+        @image.file.square_thumb.url
       end
 
       private 

@@ -5,7 +5,7 @@ module DB
       include CarrierWave::MiniMagick
 
       def store_dir
-        "#{ROOT}/src/public/uploads/#{model.class.to_s.downcase}/#{model.id}"
+        "uploads/#{model.class.to_s.downcase}/#{model.id}"
       end
 
       version :square_thumb do

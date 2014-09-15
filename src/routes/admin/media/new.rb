@@ -3,7 +3,7 @@ class DLite < Sinatra::Base
   get '/admin/media/new' do
 
     locals = {
-      title: 'Wonder of Asia'
+      title: 'New Media'
     }
 
     slim :'admin/media/new', layout: :'layouts/admin', locals: locals

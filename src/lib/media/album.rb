@@ -31,7 +31,19 @@ module Lib
       end # def load }}}
 
       def images
-        @album.images
+        @images ||= @album.images.map { |image| Lib::Media::Image.new(image) }
+      end
+
+      def audios
+        @audios ||= @album.audios.map { |audio| Lib::Media::Audio.new(audio) }
+      end
+
+      def videos
+        @videos ||= @album.videos.map { |videos| Lib::Media::Video.new(video) }
+      end
+
+      def files
+        @files ||= @album.files.map { |files| Lib::Media::File.new(file) }
       end
 
       private
@@ -51,6 +63,12 @@ module Lib
           @album = album
           @title = album.title
           @description = album.description
+
+          # Load when required
+          @images = nil
+          @audios = nil
+          @videos = nil
+          @files  = nil
         end
       end # }}}
     end # }}}

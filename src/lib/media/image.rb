@@ -19,7 +19,6 @@ module Lib
         image.albums << album
         image.save
 
-        binding.pry
         update_instance(image)
 
         [true, 'Image Uploaded successfully', image]
@@ -34,7 +33,6 @@ module Lib
       end
 
       def square_thumb
-        binding.pry
         @image.file.square_thumb.url
       end
 

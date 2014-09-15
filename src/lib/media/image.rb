@@ -1,11 +1,10 @@
 require_relative 'base'
+require_relative 'album'
 
 module Lib
   module Media
 
-    class Images
-
-      include ::Lib::Media::Base
+    class Image
 
       def initialize
       end
@@ -13,7 +12,7 @@ module Lib
       # @fn       def create album_id = nil, description = nil, file = nil {{{
       # @brief    Uploads an image and records it in the database.
       def create album_id = nil, description = nil, file = nil
-        album = get_album(album_id)
+        album = Album.new.load(album_id).album
         image = DB::Media::Image.create( albums: [ album ], description: description, file: file )
 
         [true, 'Image Uploaded successfully', image]

@@ -20,13 +20,6 @@ module Lib
 
       end # def get_album }}}
 
-      # @fn       def get_default_album {{{
-      # @brief    Returns the default album. If not exists, creates it.
-      def get_default_album
-        album = DB::Media::Album.first_or_create( title: 'Default' )
-        album.update( description: 'The default album' )
-        album
-      end # def get_default_album }}}
 
     end
   end

@@ -1,7 +1,7 @@
 module Media
   class ImageUploader < CarrierWave::Uploader::Base
     
-    include CarrierWave::MiniMagic
+    include CarrierWave::MiniMagick
 
     version :square_thumb do
       process resize_to_fill: [512, 512]

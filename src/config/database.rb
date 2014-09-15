@@ -4,6 +4,9 @@ require 'dm-migrations'
 require 'dm-migrations/migration_runner'
 require 'bcrypt'
 
+require 'carrierwave'
+require 'carrierwave/datamapper'
+
 # The models
 require_relative '../models/init'
 

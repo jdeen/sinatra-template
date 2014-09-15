@@ -9,6 +9,8 @@ module Media
     property            :updated_at,    DateTime
 
     property            :description,   String,       length: 254
+
+    has n, :albums, through: Resource
   end
 
   # Types of media available

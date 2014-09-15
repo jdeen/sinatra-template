@@ -6,8 +6,10 @@ module Lib
     class Album
       
       attr_reader :album
+      attr_reader :title, :description, :images, :audios, :videos, :files
 
-      def initialize
+      def initialize album = nil
+        update_instance(album)
       end
 
       # @fn       def load album_id = nil {{{
@@ -23,6 +25,8 @@ module Lib
           @album = get_default_album if @album.nil?
         end
 
+        update_instance(album)
+
         self
       end # def load }}}
 
@@ -36,6 +40,15 @@ module Lib
         album
       end # def get_default_album }}}
 
+      # @fn       def update_instance album = nil {{{
+      # @brief    Used the datasource to fetch data and update curren object
+      def update_instance album = nil
+        unless album.nil?
+          @album = album
+          @title = album.title
+          @description = album.description
+        end
+      end # }}}
     end # }}}
   end
 end

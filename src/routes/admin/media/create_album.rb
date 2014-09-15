@@ -9,12 +9,12 @@ class DLite < Sinatra::Base
     status, message, image = Lib::Media::Album.new.create( title, description )
 
     if status == true
-      flash[:success] = "Image uploaded succesfully."
+      flash[:success] = "Album created succesfully."
     else
-      flash[:error] = "There was an error uploading the image."
+      flash[:error] = "There was an error creating the album."
     end
 
-    redirect '/admin/media/new'
+    redirect '/admin/media/albums'
   end
 
 end

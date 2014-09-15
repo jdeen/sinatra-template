@@ -7,7 +7,8 @@ module Lib
     # @brief      Abstracts the use of database Image class with the website
     class Image
 
-      def initialize
+      def initialize image = nil
+        update_instance(image)
       end
 
       # @fn       def create album_id = nil, description = nil, file = nil {{{
@@ -15,9 +16,20 @@ module Lib
       def create album_id = nil, description = nil, file = nil
         album = Album.new.load(album_id).album
         image = DB::Media::Image.create( albums: [ album ], description: description, file: file )
+        update_instance(image)
 
         [true, 'Image Uploaded successfully', image]
       end # def create }}}
+
+      private 
+
+      # @fn       def update_instance image = nil {{{
+      # @brief    Used the datasource to fetch data and update curren object
+      def update_instance image = nil
+        unless image.nil?
+          @image = image
+        end
+      end # }}}
 
     end # }}}
   end

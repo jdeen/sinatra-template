@@ -32,8 +32,16 @@ module Lib
         @image.description
       end
 
+      def url
+        @image.file.url
+      end
+
       def square_thumb
         @image.file.square_thumb.url
+      end
+
+      def square_thumb_small
+        @image.file.square_thumb_small
       end
 
       private 

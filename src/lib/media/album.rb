@@ -30,6 +30,10 @@ module Lib
         self
       end # def load }}}
 
+      def id 
+        @album.id
+      end
+
       def images
         @images ||= @album.images.map { |image| Lib::Media::Image.new(image) }
       end
@@ -53,7 +57,7 @@ module Lib
           imgs = images[0, images.length]
         end
 
-        imgs.map { |i| i.square_thumb }
+        imgs.map { |i| i.square_thumb_small}
       end
 
       private

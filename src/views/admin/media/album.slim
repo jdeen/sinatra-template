@@ -1,0 +1,8 @@
+.panel.panel-default
+  .panel-heading
+    = album.title
+  .panel-body
+    ul
+      - album.images.each do |image|
+        li
+          img src="#{image.square_thumb_small}"

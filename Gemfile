@@ -23,6 +23,11 @@ gem 'dm-visualizer'
 gem 'dm-geokit'
 gem 'geokit'
 
+# Files
+gem 'carrierwave-datamapper', :require => 'carrierwave/datamapper'
+gem 'mini_magick'
+gem 'rmagick'
+
 # Mail
 gem 'mail'
 gem 'send_with_us'

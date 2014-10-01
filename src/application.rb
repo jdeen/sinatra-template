@@ -21,10 +21,11 @@ require 'pry'
 Pry.config.input = STDIN
 Pry.config.output = STDOUT
 
+ROOT = File.expand_path('../', File.dirname(__FILE__))
+
 require_relative 'config/database'
 require_relative 'config/warden'
-
-ROOT = File.expand_path('../', File.dirname(__FILE__))
+require_relative 'config/carrierwave'
 
 class DLite < Sinatra::Base
 

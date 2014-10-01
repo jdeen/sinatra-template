@@ -1,0 +1,10 @@
+ul
+  - albums.each do |album|
+    li
+      a href="/admin/albums/#{album.id}"
+        h3 = album.title
+
+      - album.cover_thumbs.each do |thumb|
+        img src="#{thumb}"
+
+

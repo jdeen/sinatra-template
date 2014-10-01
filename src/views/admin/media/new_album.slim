@@ -1,0 +1,30 @@
+.row
+  .col-lg-6
+
+    .panel.panel-default
+      .panel-heading
+        | Album Information
+
+      .panel-body
+
+        form action="/admin/media/albums" method="post"
+          .form-group
+            label Title
+            input.form-control type="text" name="album[title]"
+
+          .form-group
+            label Description
+            textarea.form-control name="album[description]"
+
+          button.btn.btn-default type="submit" Create
+
+  .col-lg-6
+
+    .panel.panel-default
+      .panel-heading
+        | Recent Albums
+
+      .panel-body
+
+      .panel-footer
+        | There are n albums

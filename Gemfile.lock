@@ -214,6 +214,7 @@ DEPENDENCIES
   carrierwave-datamapper
   cucumber
   data_mapper
+  dm-aggregates
   dm-geokit
   dm-mysql-adapter
   dm-sqlite-adapter

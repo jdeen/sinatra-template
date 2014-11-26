@@ -19,6 +19,7 @@ gem 'gettext'
 gem 'data_mapper'
 gem 'dm-mysql-adapter'
 gem 'dm-sqlite-adapter', group: :development
+gem 'dm-aggregates'
 gem 'dm-visualizer'
 gem 'dm-geokit'
 gem 'geokit'

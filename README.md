@@ -10,6 +10,7 @@ of mine. The work on the template and the project is getting interrupted
 because of my busy schedule at oDesk, but I think I will invest more time on
 this in the future.
 
+**Warning** - Under Construction, but features are kinda working...
 
 ## Features
 

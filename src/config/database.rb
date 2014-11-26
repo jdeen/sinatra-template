@@ -1,5 +1,6 @@
 require 'rubygems'
 require 'data_mapper'
+require 'dm-aggregates'
 require 'dm-migrations'
 require 'dm-migrations/migration_runner'
 require 'bcrypt'
